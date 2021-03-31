@@ -54,29 +54,29 @@ namespace WoWSniffer
       BigInteger exp = new BigInteger(array2);
       BigInteger bigInteger = BigInteger.PowMod(new BigInteger(array3), exp, mod);
       byte[] signature1 = new byte[key.Modulus.Length];
-        byte[] id = new byte[19]
-        {
-            (byte) 48,
-            (byte) 49,
-            (byte) 48,
-            (byte) 13,
-            (byte) 6,
-            (byte) 9,
-            (byte) 96,
-            (byte) 134,
-            (byte) 72,
-            (byte) 1,
-            (byte) 101,
-            (byte) 3,
-            (byte) 4,
-            (byte) 2,
-            (byte) 1,
-            (byte) 5,
-            (byte) 0,
-            (byte) 4,
-            (byte) 32
-        };
-            if (!RSAHelper.MakePKCS1SignatureBlock(hash, hash.Length, id, id.Length, signature1, key.Modulus.Length))
+      byte[] id = new byte[19]
+      {
+        (byte) 48,
+        (byte) 49,
+        (byte) 48,
+        (byte) 13,
+        (byte) 6,
+        (byte) 9,
+        (byte) 96,
+        (byte) 134,
+        (byte) 72,
+        (byte) 1,
+        (byte) 101,
+        (byte) 3,
+        (byte) 4,
+        (byte) 2,
+        (byte) 1,
+        (byte) 5,
+        (byte) 0,
+        (byte) 4,
+        (byte) 32
+      };
+      if (!RSAHelper.MakePKCS1SignatureBlock(hash, hash.Length, id, id.Length, signature1, key.Modulus.Length))
         return false;
       byte[] array4 = new byte[signature1.Length];
       Array.Copy((Array) signature1, (Array) array4, signature1.Length);

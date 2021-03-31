@@ -28,8 +28,8 @@ namespace WoWSniffer
     public static ushort g_NewPort = 0;
     public static uint g_NewIP = 0;
     public static int g_NextInternalConnectionID = 0;
-        public static byte[] g_EncryptSeed = new byte[16]
-        {
+    public static byte[] g_EncryptSeed = new byte[16]
+    {
       (byte) 144,
       (byte) 156,
       (byte) 208,
@@ -46,16 +46,16 @@ namespace WoWSniffer
       (byte) 243,
       (byte) 254,
       (byte) 201
-        };
-        public static byte[] g_EncryptPublicExponent = new byte[4]
-        {
+    };
+    public static byte[] g_EncryptPublicExponent = new byte[4]
+    {
       (byte) 1,
       (byte) 0,
       (byte) 1,
       (byte) 0
-        };
-        public static byte[] g_EncryptPublicModulus = new byte[256]
-        {
+    };
+    public static byte[] g_EncryptPublicModulus = new byte[256]
+    {
       (byte) 113,
       (byte) 253,
       (byte) 250,
@@ -312,8 +312,8 @@ namespace WoWSniffer
       (byte) 11,
       (byte) 42,
       (byte) 226
-        };
-        private static RSAParameters g_RSAPublicKey = new RSAParameters()
+    };
+    private static RSAParameters g_RSAPublicKey = new RSAParameters()
     {
       Modulus = WoWConnection.g_EncryptPublicModulus,
       Exponent = WoWConnection.g_EncryptPublicExponent
